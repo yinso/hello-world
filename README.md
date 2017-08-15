@@ -5,6 +5,7 @@ This is the first thing I'm making.
 TO RUN 
  1. run app.js in terminal
  2. open browser to https://localhost:8000
+ 3. Press yes button to log positive statement, and no to log negative statement
 INSTALL(?)
   1. npm
   2. node.js
