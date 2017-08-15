@@ -3,7 +3,7 @@ var app = express();
 var path = require('path');
 
 app.get('/', function (req, res) {
-  res.sendFile('/Users/juliantheberge/Documents/GitHub/hello-world/web/button.html');
+  res.sendFile('../web/button.html');
 });
 
 app.listen(8000, function () {
