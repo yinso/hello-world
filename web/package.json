@@ -9,8 +9,8 @@
   "author": "Julian",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.4",
-    "pg": "^7.1.2",
-    "socket.io": "^2.0.3"
+    "pg": "^7.2.0"
   }
 }

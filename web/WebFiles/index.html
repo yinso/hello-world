@@ -6,14 +6,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="/button.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/socket.io.js"></script>
 </head>
 <body>
-	<button class="no" id="nope">click me!</button>
-	<button class="yes" id="yup">don't click me!</button>
-<script src="/button.js"></script>
-<form action="">
-	<input id="m" autocomplete="off"/><button class="no">Send</button>
-</form>
+	<button class="yes" id="yes">click me!</button>
+	<button class="no" id="no">don't click me!</button>
+
+	<input id="recordedString" type="text" value="Write here..." />
+	<button id="stringSubmitter">Log it</button>
+
+	<p id="demo"></p>
+	<div id="loadBlock"></div>
+
+	<script src="/button.js"></script>
 </body>
 </html>

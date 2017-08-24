@@ -17,10 +17,11 @@ button:focus {
 }
 
 button.yes {
- background-color:white;
-}
-
-button.no {
  background-color:black;
  color:white;
 }
+
+button.no {
+ background-color:white;
+}
+
