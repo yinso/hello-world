@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 //database connect 
-
 var pg = require('pg');
 var { Pool, Client } = require('pg')
 var pool = new Pool({
@@ -35,7 +34,7 @@ app.listen(8000, function () {
 	console.log("App is running.");
 });
 
-//npm suggests using individual json/urlencoded middlewares
+//npm suggests using individual json/urlencoded middlewares, fix?
 app.use(bodyParser());
 
 //function for parameterized query
@@ -47,18 +46,20 @@ function basicQuery(t, v) {
 	  if (err) {
 	    console.log(err.stack)
 	  } else {
-	    console.log(res.rows[0])
+	  	console.log(res);
+	    // console.log(res.rows[0])
 	  }
 	})
 }
 
+//post button which 1) takes in a string 2) posts the string in html 3) prints in the browser console 4) prints in terminal and 5) adds an id to a table
 app.post('/', function (req,res) {
-	var item = req.body.user;
-	var text = 'INSERT INTO persons(personid) VALUES($1) RETURNING *';
-	var values = [item];
+	var obj = req.body;
+	var text = 'INSERT INTO users(user_name, first_name, last_name, email, phone_number) VALUES($1, $2, $3, $4, $5) RETURNING *';
+	var values = [obj.userName, obj.firstName, obj.lastName, obj.email, obj.phone ];
 	basicQuery(text, values);
 
-	console.log(item);
+	console.log(values);
 	res.end();
 })
 
